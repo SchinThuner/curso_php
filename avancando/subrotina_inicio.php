@@ -21,8 +21,15 @@ $contasCorrentes = [
 $contasCorrentes['123.456.766-200'] = [
     'titular' => 'Claudia',
     'saldo' => 600
-];
+];  
 $contasCorrentes['123.456.766-200']['saldo'] -= 400;
+if ($contasCorrentes['123.406.789-15']['saldo'] >= 800) {
+    $contasCorrentes['123.406.789-15']['saldo'] -= 400;
+}else {
+   echo "Você não pode sacar esse valor". PHP_EOL;
+}
+
+
 foreach ($contasCorrentes as $cpf => $conta)  { 
     exibeMensagem($cpf." ".$conta['titular']." ".$conta['saldo']);
 }
