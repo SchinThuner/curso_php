@@ -7,25 +7,47 @@ class conta
  public string $nomeTitular;
  public float $saldo = 0;
 
- public function sacar($valorASacar) : void
+ //DEFINE AS INFORMAÇÕES DO CLIENTE
+
+ public function defineCpfTitular(string $cpf) : void
+ {
+    $this->cpfTitular = $cpf;
+ }
+
+ public function defineNomeTitular(string $nome) : void
+ {
+    $this->nomeTitular = $nome;
+ }
+
+ //RETORNA AS INFORMAÇÕES REQUERIDAS PELO USUÁRIO
+
+ public function recuperaCpfTitular() : string
+ {
+     return $this->cpfTitular;
+ }
+
+ public function recuperaNomeTitular() : string
+ {
+     return $this->nomeTitular;
+ }
+
+ //MÉTODOS PARA SACAR E DEPOSITAR
+
+ public function saca($valorASacar) : void
  {
     if($valorASacar > $this->saldo){
         echo "Saldo indisponível";
         return;
-    }/*else { //utilizando a ideia de nao usar o else, pois é desnecessário se usado o return antes
-       $this->saldo -= $valorASacar;
-    }*/ 
+    }
     $this->saldo -= $valorASacar;
  }
 
- public function depositar($valorADepositar) : void
+ public function deposita($valorADepositar) : void
  {
      if ($valorADepositar < 0) {
         echo "Você não pode efetuar deposito de valores negativos";
          return;
-     }/*else {
-         echo "Você não pode efetuar deposito de valores negativos";
-     }*/
+     }
      $this->saldo += $valorADepositar;
  }
  public function transferir(float $valorATransferir,conta $contaDestino) : void
