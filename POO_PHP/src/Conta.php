@@ -10,6 +10,7 @@ class conta
  public function __construct(string $cpfTitular, string $nomeTitular)
  {
     $this->cpfTitular = $cpfTitular;
+    $this->validaNomeTitular($nomeTitular);
     $this->nomeTitular = $nomeTitular;
     $this->saldo = 0;
  }
@@ -66,5 +67,14 @@ class conta
     }
     $this->sacar($valorATransferir);
     $contaDestino->depositar($valorATransferir);
+ }
+ private function validaNomeTitular(string $nomeTitular) : void
+ {
+    if(strlen($nomeTitular) < 5)
+    {
+        echo "Digite um nome com pelo menos de 5 caracteres";
+        exit();
+    }
+
  }
 }
