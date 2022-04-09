@@ -3,12 +3,20 @@
 class conta
 {
  //definir dados da conta
- public string $cpfTitular;
- public string $nomeTitular;
- public float $saldo = 0;
+ private string $cpfTitular;
+ private string $nomeTitular;
+ private float $saldo;
 
+ public function __construct(string $cpfTitular, string $nomeTitular)
+ {
+    $this->cpfTitular = $cpfTitular;
+    $this->nomeTitular = $nomeTitular;
+    $this->saldo = 0;
+ }
+ 
  //DEFINE AS INFORMAÇÕES DO CLIENTE
-
+// Com o construtor não precisamos mais desses métodos
+ /*
  public function defineCpfTitular(string $cpf) : void
  {
     $this->cpfTitular = $cpf;
@@ -18,7 +26,7 @@ class conta
  {
     $this->nomeTitular = $nome;
  }
-
+*/
  //RETORNA AS INFORMAÇÕES REQUERIDAS PELO USUÁRIO
 
  public function recuperaCpfTitular() : string
