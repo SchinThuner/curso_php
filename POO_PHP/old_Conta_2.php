@@ -21,7 +21,19 @@ class conta
  {
      self::$numeroDeContas--;
  }
+ //DEFINE AS INFORMAÇÕES DO CLIENTE
+// Com o construtor não precisamos mais desses métodos
+ /*
+ public function defineCpfTitular(string $cpf) : void
+ {
+    $this->cpfTitular = $cpf;
+ }
 
+ public function defineNomeTitular(string $nome) : void
+ {
+    $this->nomeTitular = $nome;
+ }
+*/
  //RETORNA AS INFORMAÇÕES REQUERIDAS PELO USUÁRIO
 
  public function recuperaCpfTitular() : string
