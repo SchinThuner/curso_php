@@ -1,18 +1,17 @@
 <?php
 
-class conta
+class Conta
 {
+
  //definir dados da conta
- private string $cpfTitular;
- private string $nomeTitular;
+
+ private $titular;
  private float $saldo;
  private static $numeroDeContas = 0;
 
- public function __construct(string $cpfTitular, string $nomeTitular)
+ public function __construct(Titular $titular)
  {
-    $this->cpfTitular = $cpfTitular;
-    $this->validaNomeTitular($nomeTitular);
-    $this->nomeTitular = $nomeTitular;
+    $this->titular = $titular;
     $this->saldo = 0;
     self::$numeroDeContas++;    
  }
@@ -22,17 +21,7 @@ class conta
      self::$numeroDeContas--;
  }
 
- //RETORNA AS INFORMAÇÕES REQUERIDAS PELO USUÁRIO
-
- public function recuperaCpfTitular() : string
- {
-     return $this->cpfTitular;
- }
-
- public function recuperaNomeTitular() : string
- {
-     return $this->nomeTitular;
- }
+//--------
 
  //MÉTODOS PARA SACAR E DEPOSITAR
 
@@ -62,15 +51,22 @@ class conta
     $this->sacar($valorATransferir);
     $contaDestino->depositar($valorATransferir);
  }
- private function validaNomeTitular(string $nomeTitular) : void
- {
-    if(strlen($nomeTitular) < 5)
-    {
-        echo "Digite um nome com pelo menos de 5 caracteres";
-        exit();
-    }
+ //-----
 
+// Métodos para buscar as informações do titular da conta
+//está em outra classe
+
+ public function recuperaNomeTitular() :string
+ {
+     return $this->titular->recuperaNome();
  }
+
+ public function recuperaCpfTitular() :string 
+ {
+     return $this->titular->recuperaCpf();
+ }
+
+//------
 
  public static function recuperaNumeroDeContas() : int
  {
