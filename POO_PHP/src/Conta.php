@@ -5,7 +5,7 @@ class Conta
 
  //definir dados da conta
 
- private $titular;
+ private Titular $titular;
  private float $saldo;
  private static $numeroDeContas = 0;
 

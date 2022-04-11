@@ -2,14 +2,15 @@
 
 class Titular 
 {
- private string $cpf;
- private string $nome;   
+ private string $nome;  
+ private CPF $cpf;
 
- public function __construct (string $cpf, string $nome)
+ public function __construct (string $nome, CPF $cpf )
  {
-  $this->cpf = $cpf;
+  
   $this->validaNomeTitular($nome);
-  $this->nome = $nome;   
+  $this->nome = $nome;
+  $this->cpf = $cpf; 
  }
 
  //----
@@ -22,8 +23,9 @@ class Titular
 
  public function recuperaCpf() : string
  {
-    return $this->cpf;
+    return $this->cpf->recuperaNumero();
  }
+
 //----------------
 
 //Métodos validadores
@@ -37,7 +39,7 @@ class Titular
     }
 
  }
- 
+
  //-------
 
 }
