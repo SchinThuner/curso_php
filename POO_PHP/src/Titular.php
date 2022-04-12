@@ -4,19 +4,21 @@ class Titular
 {
  private string $nome;  
  private CPF $cpf;
+ private Endereco $endereco;
 
- public function __construct (string $nome, CPF $cpf )
+ public function __construct (string $nome, CPF $cpf, Endereco $endereco)
  {
   
   $this->validaNomeTitular($nome);
   $this->nome = $nome;
   $this->cpf = $cpf; 
+  $this->endereco = $endereco;
  }
 
  //----
 //Métodos que retornam as informações do titular
 
- public function recuperaNome() :string 
+ public function recuperaNome() : string
  {
      return $this->nome;
  }
@@ -26,6 +28,10 @@ class Titular
     return $this->cpf->recuperaNumero();
  }
 
+ public function recuperaEndereco() : Endereco
+ {
+     return $this->endereco;
+ }
 //----------------
 
 //Métodos validadores

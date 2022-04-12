@@ -1,12 +1,16 @@
 <?php
 
 require_once 'Conta.php';
+require_once 'Endereco.php';
 require_once 'Titular.php';
 require_once 'CPF.php';
 
-$meuNome = new Titular('Schindler Thuner',(new CPF('123.456.789-10')));
 
-$outroNome = new Titular('Tristana',new CPF('981.123.456-10'));
+$endereco = new Endereco('Belo Horizonte', 'Terezinha', 'Rua da Bahia', '78A');
+
+$meuNome = new Titular('Schindler Thuner',(new CPF('123.456.789-10')),$endereco);
+
+$outroNome = new Titular('Tristana',new CPF('981.123.456-10'),$endereco);
 
 $primeiraConta = new Conta($meuNome);
 $primeiraConta->deposita(400);
