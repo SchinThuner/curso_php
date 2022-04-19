@@ -1,4 +1,7 @@
 <?php
+
+namespace POO_PHP\src\Modelo\Pessoa;
+
 class Pessoa
 {
     protected string $nome;

@@ -1,5 +1,7 @@
 <?php
 
+namespace POO_PHP\src\Modelo\Endereco;
+
 class Endereco 
 {
  private string $cidade;

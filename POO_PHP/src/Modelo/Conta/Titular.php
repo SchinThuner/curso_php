@@ -1,6 +1,13 @@
 <?php
 
-class Titular extends Pessoa
+namespace POO_PHP\src\Modelo\Conta\Titular;
+
+use Desktop\Projetos_Schindler\curso_PHP\POO_PHP\src\Modelo\Pessoa;
+use POO_PHP\src\Modelo\CPF;
+use POO_PHP\src\Modelo\Endereco;
+
+
+class Titular extends POO_PHP\src\Modelo\Pessoa
 {
  private Endereco $endereco;
 

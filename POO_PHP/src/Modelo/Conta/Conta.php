@@ -1,5 +1,7 @@
 <?php
 
+namespace POO_PHP\src\Modelo\Conta\Conta;
+
 class Conta
 {
 

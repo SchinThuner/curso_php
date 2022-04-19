@@ -1,5 +1,9 @@
 <?php
 
+namespace POO_PHP\src\Modelo\Funcionario;
+
+use POO_PHP\src\Modelo\CPF;
+
 class Funcionario extends Pessoa
 {
     private string $cargo;
