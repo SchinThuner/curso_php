@@ -1,6 +1,6 @@
 <?php
 
-namespace POO_PHP\src\Modelo\CPF;
+namespace Alura\Banco\Modelo;
 
 class CPF
 {

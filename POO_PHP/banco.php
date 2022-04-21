@@ -1,17 +1,15 @@
 <?php
+//usando autoload 
+require_once 'autoload.php';
 
-require_once 'src/Modelo/Pessoa.php';
-require_once 'src/Modelo/Conta/Conta.php';
-require_once 'src/Modelo/Endereco.php';
-require_once 'src/Modelo/Conta/Titular.php';
-require_once 'src/Modelo/CPF.php';
+//require_once 'src/Modelo/Pessoa.php';
+//require_once 'src/Modelo/Conta/Conta.php';
+//require_once 'src/Modelo/Endereco.php';
+//require_once 'src/Modelo/Conta/Titular.php';
+//require_once 'src/Modelo/CPF.php';
 
-use POO_PHP\src\Modelo\Pessoa;
-use POO_PHP\src\Modelo\CPF;
-use POO_PHP\src\Modelo\Endereco;
-use POO_PHP\src\Modelo\Conta\Conta; 
-use POO_PHP\src\Modelo\Conta\Titular;
-
+use Alura\Banco\Modelo\{Pessoa,CPF,Endereco};
+use Alura\Banco\Modelo\Conta\{Conta,Titular}; 
 
 $endereco = new Endereco('Belo Horizonte', 'Terezinha', 'Rua da Bahia', '78A');
 

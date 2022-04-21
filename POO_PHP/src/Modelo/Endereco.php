@@ -1,6 +1,6 @@
 <?php
 
-namespace POO_PHP\src\Modelo\Endereco;
+namespace Alura\Banco\Modelo;
 
 class Endereco 
 {

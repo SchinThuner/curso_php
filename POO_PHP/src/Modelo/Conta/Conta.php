@@ -1,6 +1,6 @@
 <?php
 
-namespace POO_PHP\src\Modelo\Conta\Conta;
+namespace Alura\Banco\Modelo\Conta;
 
 class Conta
 {
@@ -29,11 +29,13 @@ class Conta
 
  public function saca($valorASacar) : void
  {
-    if($valorASacar > $this->saldo){
+     $tarifaSaque =  $valorASacar * 0.05;
+     $valorSaque = $valorASacar + $tarifaSaque;
+    if($valorSaque > $this->saldo){
         echo "Saldo indisponível";
         return;
     }
-    $this->saldo -= $valorASacar;
+    $this->saldo -= $valorSaque;
  }
 
  public function deposita($valorADepositar) : void
@@ -73,5 +75,10 @@ class Conta
  public static function recuperaNumeroDeContas() : int
  {
      return conta::$numeroDeContas;
+ }
+
+ public function recuperaSaldo() : float 
+ {
+     return $this->saldo;
  }
 }

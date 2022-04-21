@@ -1,13 +1,13 @@
 <?php
 
-namespace POO_PHP\src\Modelo\Conta\Titular;
+namespace Alura\Banco\Modelo\Conta;
 
-use Desktop\Projetos_Schindler\curso_PHP\POO_PHP\src\Modelo\Pessoa;
-use POO_PHP\src\Modelo\CPF;
-use POO_PHP\src\Modelo\Endereco;
+use Alura\Banco\Modelo\{Pessoa,CPF,Endereco}; // importando com o 'use' usando chaves classes em um mesmo namespace
+//use src\Modelo\CPF;
+//use src\Modelo\Endereco;
 
 
-class Titular extends POO_PHP\src\Modelo\Pessoa
+class Titular extends Pessoa
 {
  private Endereco $endereco;
 

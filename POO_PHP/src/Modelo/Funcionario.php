@@ -1,8 +1,11 @@
 <?php
 
-namespace POO_PHP\src\Modelo\Funcionario;
+namespace Alura\Banco\Modelo;
 
-use POO_PHP\src\Modelo\CPF;
+use Alura\Banco\Modelo\{CPF,Pessoa};
+//use src\Modelo\Pessoa;
+
+
 
 class Funcionario extends Pessoa
 {

@@ -1,6 +1,8 @@
 <?php
 
-namespace POO_PHP\src\Modelo\Pessoa;
+namespace Alura\Banco\Modelo;
+
+use Alura\Banco\Modelo\CPF;
 
 class Pessoa
 {
@@ -20,7 +22,7 @@ class Pessoa
     }
     public function recuperaCpf() : string 
     {
-        return $this->cpf->recuperaCpf();
+        return $this->cpf->recuperaNumero();
     }
 
     protected function validaNomeTitular(string $nomeTitular) : void
