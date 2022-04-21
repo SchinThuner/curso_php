@@ -2,13 +2,7 @@
 //usando autoload 
 require_once 'autoload.php';
 
-//require_once 'src/Modelo/Pessoa.php';
-//require_once 'src/Modelo/Conta/Conta.php';
-//require_once 'src/Modelo/Endereco.php';
-//require_once 'src/Modelo/Conta/Titular.php';
-//require_once 'src/Modelo/CPF.php';
-
-use Alura\Banco\Modelo\{Pessoa,CPF,Endereco};
+use Alura\Banco\Modelo\{CPF,Endereco};
 use Alura\Banco\Modelo\Conta\{Conta,Titular}; 
 
 $endereco = new Endereco('Belo Horizonte', 'Terezinha', 'Rua da Bahia', '78A');
@@ -23,7 +17,8 @@ $segundaConta = new Conta($outroNome);
 
 echo $primeiraConta->recuperaNomeTitular().PHP_EOL;
 echo $primeiraConta->recuperaCpfTitular().PHP_EOL;
+echo $primeiraConta->recuperaSaldo().PHP_EOL;
 
 var_dump($primeiraConta);
-
+unset($outroNome);
 echo Conta::recuperaNumeroDeContas();
