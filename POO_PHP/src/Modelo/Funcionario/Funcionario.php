@@ -1,10 +1,8 @@
 <?php
 
-namespace Alura\Banco\Modelo;
+namespace Alura\Banco\Modelo\Funcionario;
 
 use Alura\Banco\Modelo\{CPF,Pessoa};
-//use src\Modelo\Pessoa;
-
 
 
 class Funcionario extends Pessoa
